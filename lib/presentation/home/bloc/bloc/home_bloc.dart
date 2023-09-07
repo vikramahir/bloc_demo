@@ -8,11 +8,11 @@ part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(const HomeInitialState()) {
-    on<GetCurrencyDataEvent>(onCunvertData);
+    on<GetCurrencyDataEvent>(onConvertData);
   }
   final restClient = RestClient();
 
-  onCunvertData(
+  onConvertData(
       GetCurrencyDataEvent getCurrencyDataEvent, Emitter emitter) async {
     emitter.call(const HomeLoadingState());
     final result = await restClient.get(
