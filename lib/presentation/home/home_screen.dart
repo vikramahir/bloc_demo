@@ -1,3 +1,5 @@
+import 'package:demo_bloc_currency/core/utils/app_navigator.dart';
+import 'package:demo_bloc_currency/core/utils/app_routes.dart';
 import 'package:demo_bloc_currency/presentation/home/bloc/bloc/home_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -85,6 +87,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     }
                   },
                   child: const Text('Submit'),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                TextButton(
+                  onPressed: () {
+                    AppNavigation.intent(
+                      context,
+                      AppRoutes.covidScreen,
+                    );
+                  },
+                  child: const Text('Next Screen'),
                 ),
               ],
             ),
