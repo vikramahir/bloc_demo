@@ -14,6 +14,7 @@ final class HomeInitialState extends HomeState {
   List<Object> get props => [];
 }
 
+
 final class HomeLoadingState extends HomeState {
   const HomeLoadingState();
 
