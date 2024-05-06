@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         BlocProvider<HomeBloc>(
           create: (context) => HomeBloc(),
         ),
+
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
